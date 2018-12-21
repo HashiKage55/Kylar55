@@ -19,7 +19,7 @@ public class ControlJugador : ControladorBasico {
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            animator.SetBool(Utils.ANIMATION_AGACHADO, true);
+            animator.SetBool(Utils.ANIMATION_VOLTERETA, true);
         }
  	}
 
@@ -30,7 +30,7 @@ public class ControlJugador : ControladorBasico {
 
     void finalizarAgachado()
     {
-        animator.SetBool(Utils.ANIMATION_AGACHADO, false);
+        animator.SetBool(Utils.ANIMATION_VOLTERETA, false);
     }
 
     public override void juegoEnPausa()
