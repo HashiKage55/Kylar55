@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/asasas.unity
+    guid: 81ec6eaeb73ce5449b59427de89ea1fe
+  - enabled: 1
+    path: Assets/Play.unity
+    guid: a4d2f6b7ced1b8f4d8db80b82173c424
