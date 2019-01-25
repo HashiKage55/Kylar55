@@ -16,6 +16,7 @@ public class Movimiento : MonoBehaviour
     void Start()
     {
         myVector = Medio.transform.position;
+
     }
 
     // Update is called once per frame
