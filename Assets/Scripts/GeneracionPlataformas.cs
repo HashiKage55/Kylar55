@@ -28,12 +28,12 @@ public class GeneracionPlataformas : ControladorBasico {
         
 
 
-        var plataformaInicio = Instantiate(elementoInicial, puntoInicio.position, puntoInicio.rotation);
+        //var plataformaInicio = Instantiate(elementoInicial, puntoInicio.position, puntoInicio.rotation);
         //Instantiate(elementoSiguiente, puntoSiguiente.position, puntoSiguiente.rotation);
-        Transform destino = plataformaInicio.gameObject.transform.Find("puntoAnclado");
-        var elemento1 = Instantiate(elementoSiguiente, destino.position, destino.rotation);
-        Transform destino2 = elemento1.gameObject.transform.Find("puntoAnclado2");
-        Instantiate(elementoSiguiente2, destino2.position, destino2.rotation);
+        //Transform destino = plataformaInicio.gameObject.transform.Find("puntoAnclado");
+       // var elemento1 = Instantiate(elementoSiguiente, destino.position, destino.rotation);
+       // Transform destino2 = elemento1.gameObject.transform.Find("puntoAnclado2");
+        //Instantiate(elementoSiguiente2, destino2.position, destino2.rotation);//
     }
     
     
