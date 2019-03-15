@@ -16,15 +16,17 @@ public class ControladorPlataforma : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        
-            Debug.Log("hola");
             var script_mapa = GameObject.Find("ControladorMapa").GetComponent<CargarPlataforma>();
             int numeroAleatorio = Random.Range(0, script_mapa.mapa.Count);
             var elementoAleatorio = script_mapa.mapa[numeroAleatorio];
             var puntoAnclaje = script_mapa.elementoActual.transform.GetChild(1);
             script_mapa.elementoActual = Instantiate(elementoAleatorio, puntoAnclaje.position, puntoAnclaje.rotation);
-            
+            Debug.Log("Choca : " + gameObject);
+    }
+    private void OnTriggerExit(Collider player)
+    {
+        
+         Destroy(gameObject);
         
     }
 }

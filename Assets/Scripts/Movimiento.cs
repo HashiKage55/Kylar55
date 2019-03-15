@@ -11,11 +11,18 @@ public class Movimiento : MonoBehaviour
     private Transform pointB;
     private Transform pointC;
     Vector3 myVector;
-    public float speed;
+    public float speed = 1.0f;
+    public Rigidbody rb;
+    private float t = 0.0f;
+    private bool moving = false;
+
+
     // Use this for initialization
     void Start()
     {
         myVector = Medio.transform.position;
+        rb.velocity = new Vector3(0, 10, 0);
+        moving = true;
 
     }
 
@@ -58,5 +65,26 @@ public class Movimiento : MonoBehaviour
 
         }
         transform.position = Vector3.MoveTowards(transform.position, myVector, speed);
+    }
+    void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            // the cube is going to move upwards in 10 units per second
+            rb.velocity = new Vector3(0, 10, 0);
+            moving = true;
+            Debug.Log("jump");
+        }
+
+        if (moving)
+        {
+            // when the cube has moved over 1 second report it's position
+            t = t + Time.deltaTime;
+            if (t > 1.0f)
+            {
+                Debug.Log(gameObject.transform.position.y + " : " + t);
+                t = 0.0f;
+            }
+        }
     }
 }

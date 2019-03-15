@@ -20,12 +20,15 @@ public class CargarPlataforma : ControladorBasico
         encontrarPlataformas();
         //                      GameObject              Position                        Rotation
         var plataformaInicio = Instantiate(elementoInicial, puntoInicial.position, puntoInicial.rotation);
-        Transform destino = plataformaInicio.gameObject.transform.Find("p");
+        Debug.Log("Inicio: " + plataformaInicio);
+        Transform destino = plataformaInicio.transform.GetChild(1); ;
         Debug.Log("Destino: " + destino);
         int numeroAleatorio = Random.Range(0, mapa.Count);
         var elementoAleatorio = mapa[numeroAleatorio];
         Debug.Log("Siguiente elemento: " + elementoAleatorio);
-        elementoActual = Instantiate(elementoAleatorio, destino.position, destino.rotation);
+        var s = Instantiate(elementoAleatorio, destino.position, destino.rotation);
+        Debug.Log("Resultado: " +   s);
+        elementoActual = s;
 
     }
 
