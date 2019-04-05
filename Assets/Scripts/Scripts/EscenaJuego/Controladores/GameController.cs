@@ -10,7 +10,9 @@ public class GameController : MonoBehaviour {
 
     public EstadoJuego estado;
     public List<ControladorBasico> controladores;
+    
     public static GameController controlador;
+    
 
     /*
      *  https://docs.unity3d.com/Manual/ExecutionOrder.html
@@ -22,11 +24,13 @@ public class GameController : MonoBehaviour {
         else if (controlador != this)
             Destroy(gameObject);
         controladores = new List<ControladorBasico>();
+        
     }
 
 	void Start () {
         
         estado = EstadoJuego.Jugando;
+        
     }
 
     void Update () {
@@ -61,4 +65,5 @@ public class GameController : MonoBehaviour {
     {
         controladores.Add(controlador);
     }
+    
 }

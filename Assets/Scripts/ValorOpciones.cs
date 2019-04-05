@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
+
+
 public static class ValorOpciones
 {
     
@@ -26,4 +29,6 @@ public static class ValorOpciones
 
     /**/
     public static KeyCode ROLL_BUTTON = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("botonRueda", KeyCode.LeftShift.ToString()));
+
+    
 }

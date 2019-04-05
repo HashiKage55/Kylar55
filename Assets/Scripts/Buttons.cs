@@ -45,6 +45,7 @@ public class Buttons : MonoBehaviour
     }
     void Options()
     {
+        SceneManager.LoadScene("Options");
 
     }
     void LeaveToTitle()
